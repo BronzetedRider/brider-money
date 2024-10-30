@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5000">
+    <meta property="og:title" content="Compete and Win Money">
+    <meta property="og:description" content="This site help users to win money based on their choices. Here, instead of just betting in random games without the capability of controlling,you can compete with friends and win cash. You just need to choose a prize then request for other competers of thesame prize">
+    <meta property="og:image" content="<img src=canvas.png 1024w>">
+    <meta property="og:url" content="https://www.google.com./my-brider-money">
+    <title>B-Rider</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+    <div>
+       <nav role="navigation">
+        <a href="index.html">Home</a>
+        <a href="stopwatch.html">StopWatch</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="Cars.html">Slides</a>
+        <a href="">Profile</a>
+    </nav>
+    </div>
+     <div id="clock-container">
+        <div id="clock">00:00:00</div>
+        <div id="dateDisplay">00/00/0000</div>
+    </div>
+</header>
+    <main>
+
+         <div id="container">
+        <h1>Dice Roller</h1>
+        <label for="numInput"># of dice: </label>
+        <input type="number" id="numInput" value="1" min="1" max="3"><br>
+        <button type="button" id="diceBtn" onclick="rollDice()">roll</button><br>
+
+        <p id="numResult"></p>
+        <p id="diceImages"></p>
+     </div>
+        
+        <div id="rockGame">
+            <div class="choices">
+                <button onclick="playGame('rock')">👊</button>
+                <button onclick="playGame('paper')">✋</button>
+                <button onclick="playGame('scissors')">✌</button>
+            </div>
+
+            <div id="playerDisplay">Player: </div>
+            <div id="computerDisplay">Computer: </div>
+    
+            <div id="resultDisplay"></div>
+
+            <div class="scoreDisplay">Player Score:
+                <span id="playerScoreDisplay">0</span>
+            </div>
+    
+            <div class="scoreDisplay">Computer Score:
+                <span id="computerScoreDisplay">0</span>
+            </div>
+        </div>
+        
+       <div id="theGame">
+           <div id="myBoxMove">😁</div>
+       </div>
+    </main>
+   <br>
+
+   <script src="index.js"></script>
+
+   
+  <footer>
+      &copy copyright 2024 reserved<br>
+      <a href="send:https://www.google.com" value="Hello bro!">Share Link🎤</a><br>
+      <address>
+          <p>contact us:<small><a href="tel:+237671964753">+237671964753</a></small></p>
+          <p>Mail:<small><a href="mailto:bronzetedrider207@gmail.com">bronzetedrider207@gmail.com</a></small></p>
+      </address>
+      
+  </footer>
+  <nav id="bottomnav">
+        <a href="">Home</a>
+        <a class="active" href="boxmove.html" target=_blank>Games</a>
+        <a href="">Videos</a>
+        <a href="">Music</a>
+        <a href="">Profile</a>
+    </nav>
+</body>
+</html>

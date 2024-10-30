@@ -1,0 +1,521 @@
+*{
+    box-sizing: border-box;
+}
+
+ body{
+     background-image: url(Images/wallpaper.jpg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     background-attachment: fixed;
+     margin: 0;
+ }
+
+  header{
+      position: sticky;
+      top: 0px;
+      width: 100%;
+      margin: auto;
+  }
+
+  header nav{
+      background-color: hsl(214, 55%, 10%);
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+  }
+
+  nav a.active{
+      background-color: hsl(120, 100%, 70%);
+      font-weight: bold;
+  }
+
+  nav a{
+      font-size: 2rem;
+      text-decoration: none;
+      width: 20%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      color: blueviolet;
+  }
+
+  nav a:hover:not(.active){
+      background-color: hsl(120, 100%, 80%);
+  }  
+
+  #container{
+      background-color: hsl(208, 90%, 90%, 0.75);
+      max-width: 15rem;
+      text-align: center;
+      border-radius: 6px;
+      margin: auto;
+      margin-top: 25vh;
+      height: 23rem;
+  }
+
+  h1{
+      font-family: Arial, sans-serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+      position: relative;
+      top: 10px;
+  }
+
+  label{
+      font-size: 1.5rem;
+  }
+
+  #numInput{
+      font-family: Helvetica;
+      font-size: 1.5rem;
+      width: 30%;
+      font-weight: bold;
+      border-radius: 6px;
+      text-align: center;
+      margin: 1%;
+  }
+
+  #diceBtn, #alertBtn, .stopWatchBtn{
+      font-size: 1.5rem;
+      margin: 5%;
+      padding: 10px 15px;
+      border-radius: 6px;
+      border-top:2px solid tomato;
+      border-bottom:2px solid tomato;
+      border-right:2px solid blue;
+      border-left:2px solid blue;
+      background-color: hsl(0, 0%, 100%);
+      cursor: pointer;
+  }
+
+  button:hover{
+      background-color: gold;
+  }
+
+  button:active{
+      background-color: hsl(0, 0%, 95%);
+  }
+
+  p{
+      font-family: verdana, sans-serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+  }
+
+  #diceImages img{
+      border: solid;
+      border-radius: 6px;
+      margin: 5px;
+      color: gold;
+  }  
+
+  a::selection{
+      color: rgb(89, 255, 71);
+      background-color: hsl(0, 0%, 21%);
+  }
+
+  div::selection{
+      color: rgb(89, 255, 71);
+      background-color: hsl(0, 0%, 21%);
+  }
+
+  td::before{
+      content: "⇛";
+  }
+
+  th::before{
+      content: "🎉";
+  }
+
+
+  h1::selection{
+      color: rgb(89, 255, 71);
+      background-color: hsl(0, 0%, 21%);
+  }
+
+  summary::marker{
+      content: "⮚";
+      color: hsl(60, 100%, 50%);
+      font-size: 1.5em;
+      text-shadow: 5px 5px 9px gold;
+  }
+
+  summary::after{
+      content: "⮛";
+      color: hsl(60, 100%, 50%);
+      text-shadow: 5px 5px 9px gold;
+      font-size: 1.5em;
+  }
+
+  p::first-line{
+      color: hsl(50, 100%, 50%);
+  }
+
+  p::first-letter{
+      font-style: italic;
+      font-size: 2em;
+      font-family: serif;
+      color: hsl(50, 0%, 50%);
+  }
+
+  p::selection{
+      color: hsl(101, 100%, 50%);
+      background-color: hsl(0, 0%, 25%);
+  }
+
+  #clock-container{
+      width: 250px;
+      margin-left: auto;
+      position: relative;
+      backdrop-filter: blur(5px);
+      border: 2px dotted hsl(75, 100%, 50%);
+      text-align: center;
+      border-radius: 10px;
+  }
+  #clock{
+      font-family: monospace;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: hsl(0, 100%, 90%);
+      position: relative;
+      right: 5px;
+      width: 100%;
+      padding: 10px 25px;
+  }
+
+  #date-container{
+      width: 50%;
+      margin-right: auto;
+  }
+  #dateDisplay{
+      font-family: monospace;
+      font-weight: bold;
+      font-size: 1.0rem;
+      backdrop-filter: blur(5px);
+      color: hsl(0, 100%, 90%);
+      position: relative;
+      padding: 10px 25px;
+  }
+
+
+
+
+  /* STOP WATCH */
+
+  #myStopWatch{
+      text-align: center;
+      backdrop-filter: blur(50px);
+  }
+
+  #stopwatch-container{
+      background-color: hsl(0, 0%, 20%, 0.95);
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+      margin: auto;
+      border: 5px groove;
+      border-radius: 50px;
+  }
+
+  #stopwatch_display{
+      font-family: monospace;
+      font-size: 2.5rem;
+      font-weight: bold;
+      position: relative;
+      margin-bottom: 50px;
+      padding: 10px 15px;
+      border: 3px ridge;
+      border-radius: 5px;
+      color: hsl(0, 0%, 30%);
+      background-color: hsl(0, 0%, 58%, 0.55);
+      text-shadow: 3px 3px 5px hsl(0, 0%, 70%);
+  }
+
+  #stopwatch-controls button{
+      margin: 5px;
+      color: white;
+      transition: background-color 0.5s ease;
+      min-width: 60px;
+  }
+
+  #start-chrono{
+      background-color: hsl(108, 100%, 50%);
+  }
+   #start-chrono:hover{
+      background-color: hsl(108, 100%, 35%);
+  }
+
+  #stop-chrono{
+      background-color: rgb(250, 0, 0);
+  }
+  #stop-chrono:hover{
+      background-color: rgb(150, 0, 0);
+  }
+
+  #reset-chrono{
+      background-color: hsl(214, 90%, 60%);
+  }
+  #reset-chrono:hover{
+      background-color: hsl(214, 90%, 45%);
+  }
+
+
+
+
+
+  .containerBox{
+      display: flex;
+      border: 10px solid black;
+      height: 90vh;
+  }
+
+  .box{
+      width: 150px;
+      height: 150px;
+      font-size: 8em;
+      text-align: center;
+      border-radius: 15px;
+  }
+
+  #box1{
+      background-color: hsl(0, 100%, 70%);
+      /* align-self: start; */
+      align-self: center;
+      /* align-self: end; */
+  }
+  #box2{
+      background-color: hsl(52, 100%, 70%);
+      align-self: end;
+  }
+  #box3{
+      background-color: hsl(111, 100%, 70%);
+      order: -1;
+  }
+  #box4{
+      background-color: hsl(201, 100%, 70%);
+  }
+ 
+/* CALCULATOR PROGRAM  START*/
+
+#calculator{
+    width: 500px;
+    background-color: hsl(0, 0%, 20%);
+    border-radius: 15px;
+    margin: auto;
+    border-top: 5px ridge hsl(0 86% 75%);
+    border-bottom: 5px ridge hsl(0 86% 75%);
+    border-right: 5px ridge hsl(214 86% 75%);
+    border-left: 5px ridge hsl(214 86% 75%);
+}
+
+#display{
+    width: 100%;
+    font-size: 6rem;
+    color: white;
+    background-color: hsl(0, 0%, 30%);
+    border: none;
+    border-radius: 15px;
+    position: relative;
+}
+
+#keys{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 15px;
+    position: relative;
+}
+
+#keys button{
+    font-family: Helvetica, monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    color: white;
+    background-color: hsl(0, 0%, 50%);
+    border: none;
+    border-radius: 50px;
+}
+
+#keys button:hover{
+    background-color: hsl(0, 0%, 60%);
+}
+
+#keys button:active{
+    background-color: hsl(0, 0%, 70%);
+}
+
+#keys .bodmas{
+    background-color: hsl(38 100% 50%);
+}
+
+#keys .bodmas:hover{
+    background-color: hsl(38 100% 60%);
+}
+
+#keys .bodmas:active{
+    background-color: hsl(38 100% 70%);
+}
+
+@media screen and (max-width: 300px;){
+    #calculator, #display, #keys{
+        width: 100%;
+    }
+}
+
+/* CALCULATOR PROGRAM  END*/
+
+
+/* MOVING BOX START */
+
+#theGame{
+    background-color: hsl(0, 0%, 50%);
+    position: relative;
+    height: 90vh;
+    width: 90%;
+    margin: auto;
+    border: 2px ridge black;
+    border-radius: 10px;
+}
+
+#myBoxMove{
+    font-size: 7.5rem;
+    background-color: hsl(208, 100%, 70%);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    border-radius: 100px;
+}
+
+/* MOVING BOX END */
+
+
+
+/* IMAGE SLIDER START */
+
+.slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 0%, 0.5);
+}
+.slider img{
+    width: 100%;
+    display: none;
+}
+img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.slider button{
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    transform: translateY(-50%);
+    background-color: hsl(0, 0%, 0%, 0.2);
+    color: hsl(0, 0%, 60%);
+    border: none;
+    border-radius: 65px 30px;
+    margin: 0;
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+
+@keyframes fade {
+    from{opacity: 0.5;}
+    to{opacity: 1.0;}
+}
+
+/* IMAGE SLIDER END */
+
+
+
+
+
+#rockGame{
+    font-family: Arial, sans-serif;
+    fon-weight: bold;
+    background-color: hsl(0, 100%, 91%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    border: 2px groove black;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.choices{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+.choices button{
+    font-size: 6.5rem;
+    border-radius: 100px;
+    margin: 0 10px;
+}
+#playerDisplay{
+    font-size: 2.5rem;
+}
+#computerDisplay{
+    font-size: 2.5rem;
+}
+#resultDisplay{
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin: 10px;
+}
+.scoreDisplay{
+    font-size: 1.5rem;
+}
+.greenText{
+    color: hsl(120, 90%, 63%);
+}
+.redText{
+    color: hsl(0, 90%, 63%);
+}
+.blueText{
+    color: hsl(240, 90%, 69%);
+}
+
+
+ footer{
+     font-family: sans, sans-serif;
+     background-color: hsl(214, 55%, 20%);
+     display: block;
+     clear: both;
+     position: relative;
+     bottom: 0px;
+     height: 250px;
+ }
+
+ #bottomnav{
+     background-color: hsl(214, 55%, 10%);
+     display: flex;
+     flex-direction: row;
+     position: sticky;
+     bottom: 0px;
+ }
+
+
+
+
+
+
